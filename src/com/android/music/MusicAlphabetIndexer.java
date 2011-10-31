@@ -19,6 +19,7 @@ package com.android.music;
 import android.database.Cursor;
 import android.provider.MediaStore;
 import android.widget.AlphabetIndexer;
+import fr.mildred.music.R;
 
 /**
  * Handles comparisons in a different way because the Album, Song and Artist name

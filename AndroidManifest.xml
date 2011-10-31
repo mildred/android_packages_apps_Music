@@ -15,7 +15,7 @@
 -->
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-        package="com.android.music">
+        package="fr.mildred.music">
 
     <original-package android:name="com.android.music" />
 
@@ -89,7 +89,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="AudioPreview" android:theme="@android:style/Theme.Dialog"
+        <activity android:name="com.android.music.AudioPreview" android:theme="@android:style/Theme.Dialog"
                 android:taskAffinity=""
                 android:excludeFromRecents="true" android:exported="true" >
             <intent-filter>
@@ -267,9 +267,9 @@
             android:theme="@android:style/Theme.Dialog" android:exported="false" />
         <activity android:name="com.android.music.ScanningProgress"
             android:theme="@android:style/Theme.Dialog" android:exported="false" />
-        <activity android:name="MusicSettingsActivity" android:label="@string/settings" />
-        <activity android:name="EditGesturesActivity" android:label="@string/edit_gestures_title" />
-        <activity android:name="CustomizeGestureActivity" android:label="@string/customize_gesture_title" />
+        <activity android:name="com.android.music.MusicSettingsActivity" android:label="@string/settings" />
+        <activity android:name="com.android.music.EditGesturesActivity" android:label="@string/edit_gestures_title" />
+        <activity android:name="com.android.music.CustomizeGestureActivity" android:label="@string/customize_gesture_title" />
         <service android:name="com.android.music.MediaPlaybackService"
             android:exported="false" />
         <receiver android:name="com.android.music.MediaAppWidgetProvider4x1" android:label="Music (4x1)">

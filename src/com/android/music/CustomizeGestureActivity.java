@@ -27,6 +27,7 @@ import android.gesture.GestureLibraries;
 import android.gesture.GestureLibrary;
 import android.gesture.GestureOverlayView;
 import android.gesture.Gesture;
+import fr.mildred.music.R;
 
 public class CustomizeGestureActivity extends Activity {
     private static final float THRESHOLD = 120.0f;

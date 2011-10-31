@@ -23,6 +23,7 @@ import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageButton;
+import fr.mildred.music.R;
 
 /**
  * A button that will repeatedly call a 'listener' method

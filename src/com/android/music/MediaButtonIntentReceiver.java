@@ -23,6 +23,7 @@ import android.media.AudioManager;
 import android.os.Handler;
 import android.os.Message;
 import android.view.KeyEvent;
+import fr.mildred.music.R;
 
 /**
  * 

@@ -45,6 +45,7 @@ import android.widget.SectionIndexer;
 import android.widget.SimpleCursorAdapter;
 import android.widget.TextView;
 
+import fr.mildred.music.R;
 import java.io.IOException;
 import java.text.Collator;
 import java.util.Formatter;

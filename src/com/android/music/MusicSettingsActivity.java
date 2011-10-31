@@ -22,6 +22,7 @@ import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
 import android.os.Bundle;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceManager;
+import fr.mildred.music.R;
 
 public class MusicSettingsActivity extends PreferenceActivity implements
         OnSharedPreferenceChangeListener {

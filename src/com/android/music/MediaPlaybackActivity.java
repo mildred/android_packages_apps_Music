@@ -18,6 +18,7 @@ package com.android.music;
 
 import java.util.ArrayList;
 import com.android.music.MusicUtils.ServiceToken;
+import fr.mildred.music.R;
 
 import android.app.Activity;
 import android.app.AlertDialog;

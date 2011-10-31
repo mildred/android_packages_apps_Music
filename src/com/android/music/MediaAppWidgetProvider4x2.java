@@ -27,6 +27,7 @@ import android.net.Uri;
 import android.os.Environment;
 import android.view.View;
 import android.widget.RemoteViews;
+import fr.mildred.music.R;
 
 /**
  * Simple widget to show currently playing album art along

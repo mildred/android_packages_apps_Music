@@ -15,7 +15,7 @@
 -->
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.android.music.tests">
+    package="fr.mildred.music">
 
     <application>
         <uses-library android:name="android.test.runner" />

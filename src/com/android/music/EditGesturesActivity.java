@@ -16,6 +16,7 @@
 
 package com.android.music;
 
+import fr.mildred.music.R;
 import java.util.ArrayList;
 
 import android.app.AlertDialog;

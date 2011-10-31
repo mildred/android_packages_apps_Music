@@ -20,6 +20,7 @@ import android.database.AbstractCursor;
 import android.database.Cursor;
 import android.database.DataSetObserver;
 import android.util.Log;
+import fr.mildred.music.R;
 
 /**
  * A variant of MergeCursor that sorts the cursors being merged. If decent

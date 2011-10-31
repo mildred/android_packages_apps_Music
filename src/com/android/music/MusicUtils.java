@@ -58,6 +58,7 @@ import android.widget.TabWidget;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import fr.mildred.music.R;
 import java.io.File;
 import java.io.FileDescriptor;
 import java.io.FileNotFoundException;

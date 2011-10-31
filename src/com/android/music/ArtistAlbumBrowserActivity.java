@@ -18,6 +18,7 @@ package com.android.music;
 
 import com.android.music.MusicUtils.ServiceToken;
 import com.android.music.QueryBrowserActivity.QueryListAdapter.QueryHandler;
+import fr.mildred.music.R;
 
 import android.app.ExpandableListActivity;
 import android.app.SearchManager;

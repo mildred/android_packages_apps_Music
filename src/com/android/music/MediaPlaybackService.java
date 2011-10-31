@@ -50,6 +50,7 @@ import android.util.Log;
 import android.widget.RemoteViews;
 import android.widget.Toast;
 
+import fr.mildred.music.R;
 import java.io.FileDescriptor;
 import java.io.IOException;
 import java.io.PrintWriter;

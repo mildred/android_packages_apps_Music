@@ -28,6 +28,7 @@ import android.view.View;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 
+import fr.mildred.music.R;
 import java.lang.Integer;
 import android.util.Log;
 

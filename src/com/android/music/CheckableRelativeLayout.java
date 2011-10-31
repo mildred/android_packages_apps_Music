@@ -20,6 +20,7 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.widget.Checkable;
 import android.widget.RelativeLayout;
+import fr.mildred.music.R;
 
 /**
  * A special variation of RelativeLayout that can be used as a checkable object.
