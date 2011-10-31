@@ -129,20 +129,18 @@ public class MediaPlaybackService extends Service {
     String[] mCursorCols = new String[] {
             "audio._id AS _id",             // index must match IDCOLIDX below
             MediaStore.Audio.Media.ARTIST,
-            MediaStore.Audio.Media.ALBUM_ARTIST,
             MediaStore.Audio.Media.ALBUM,
             MediaStore.Audio.Media.TITLE,
             MediaStore.Audio.Media.DATA,
             MediaStore.Audio.Media.MIME_TYPE,
             MediaStore.Audio.Media.ALBUM_ID,
             MediaStore.Audio.Media.ARTIST_ID,
-            MediaStore.Audio.Media.ALBUM_ARTIST_ID,
             MediaStore.Audio.Media.IS_PODCAST, // index must match PODCASTCOLIDX below
             MediaStore.Audio.Media.BOOKMARK    // index must match BOOKMARKCOLIDX below
     };
     private final static int IDCOLIDX = 0;
-    private final static int PODCASTCOLIDX = 10;
-    private final static int BOOKMARKCOLIDX = 11;
+    private final static int PODCASTCOLIDX = 8;
+    private final static int BOOKMARKCOLIDX = 9;
     private BroadcastReceiver mUnmountReceiver = null;
     private BroadcastReceiver mA2dpReceiver = null;
     private WakeLock mWakeLock;
@@ -820,7 +818,6 @@ public class MediaPlaybackService extends Service {
      * for the currently playing track:
      * "id" - Integer: the database row ID
      * "artist" - String: the name of the artist
-     * "album_artist" - String: the name of the album artist
      * "album" - String: the name of the album
      * "track" - String: the name of the track
      * The intent has an action that is one of
@@ -839,7 +836,6 @@ public class MediaPlaybackService extends Service {
         Intent i = new Intent(what);
         i.putExtra("id", Long.valueOf(getAudioId()));
         i.putExtra("artist", getArtistName());
-        i.putExtra("album_artist", getAlbumartistName());
         i.putExtra("album",getAlbumName());
         i.putExtra("track", getTrackName());
         i.putExtra("playing", isPlaying());
@@ -1770,24 +1766,6 @@ public class MediaPlaybackService extends Service {
         }
     }
 
-    public String getAlbumartistName() {
-        synchronized(this) {
-            if (mCursor == null) {
-                return null;
-            }
-            return mCursor.getString(mCursor.getColumnIndexOrThrow(MediaStore.Audio.Media.ALBUM_ARTIST));
-        }
-    }
-
-    public long getAlbumartistId() {
-        synchronized (this) {
-            if (mCursor == null) {
-                return -1;
-            }
-            return mCursor.getLong(mCursor.getColumnIndexOrThrow(MediaStore.Audio.Media.ALBUM_ARTIST_ID));
-        }
-    }
-
     public String getAlbumName() {
         synchronized (this) {
             if (mCursor == null) {
@@ -2085,12 +2063,6 @@ public class MediaPlaybackService extends Service {
         public long getArtistId() {
             return mService.get().getArtistId();
         }
-        public String getAlbumartistName() {
-            return mService.get().getAlbumartistName();
-        }
-        public long getAlbumartistId() {
-            return mService.get().getAlbumartistId();
-        }
         public void enqueue(long [] list , int action) {
             mService.get().enqueue(list, action);
         }
@@ -2146,7 +2118,6 @@ public class MediaPlaybackService extends Service {
         writer.println("" + mPlayListLen + " items in queue, currently at index " + mPlayPos);
         writer.println("Currently loaded:");
         writer.println(getArtistName());
-        writer.println(getAlbumartistName());
         writer.println(getAlbumName());
         writer.println(getTrackName());
         writer.println(getPath());
