@@ -8,7 +8,7 @@ Targets: Android 2.3.1
 Building
 --------
 
-Just use `ant`
+For some reason, `ant` does not work. Prefer using eclipse with ADT.
 
 Developping
 -----------
